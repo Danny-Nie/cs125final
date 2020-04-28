@@ -11,8 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="220dp"
+        android:layout_marginStart="-2dp"
+        android:layout_marginBottom="153dp"
         android:text="Done and Start" />
 
     <TextView

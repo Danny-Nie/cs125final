@@ -12,8 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements PauseDialog.PauseDialogListener{
-    private static final long START_TIME_IN_MILLIS = 1500000;
+public class Main2Activity extends AppCompatActivity implements PauseDialog.PauseDialogListener {
+    private static final long START_TIME_IN_MILLIS = 2700000;
 
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;
