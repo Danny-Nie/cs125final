@@ -10,10 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="-2dp"
+        android:layout_marginLeft="-2dp"
         android:layout_marginBottom="153dp"
-        android:text="Done and Start" />
+        android:text="I'm Ready" />
 
     <TextView
         android:id="@+id/textView2"
@@ -22,61 +24,15 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="75dp"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="119dp"
-        android:text="Set Your Work Time"
-        android:textColor="@color/design_default_color_primary"
-        android:textSize="30sp" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="279dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="162dp"
-        android:orientation="vertical">
-
-        <ImageButton
-            android:id="@+id/adjHourUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="126dp"
-            android:layout_marginLeft="126dp"
-            android:layout_marginTop="44dp"
-            app:srcCompat="@drawable/ic_expand_less_black_24dp" />
-
-        <ImageButton
-            android:id="@+id/adjHourDown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="125dp"
-            android:layout_marginLeft="125dp"
-            android:layout_marginBottom="40dp"
-            app:srcCompat="@drawable/ic_expand_more_black_24dp" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="111dp"
-            android:layout_marginLeft="111dp"
-            android:layout_marginBottom="91dp"
-            android:text="08:00"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:textSize="70sp" />
-
-    </RelativeLayout>
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="false"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="296dp"
+        android:layout_marginEnd="-44dp"
+        android:text="Start Working?"
+        android:textColor="#000000"
+        android:textSize="50dp" />
 
 </RelativeLayout>

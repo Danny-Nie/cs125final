@@ -13,29 +13,41 @@ public class ChoiceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choice);
-        Button button1 = findViewById(R.id.button1);
+        Button button1 = findViewById(R.id.min25);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
-                openMianActivity();
+                openMainActivity();
                 //beginCounter.settText("Done and Start");
             }
         });
-        Button button2 = findViewById(R.id.button2);
+        Button button2 = findViewById(R.id.min45);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
-                openMian2Activity();
+                openMain2Activity();
+                //beginCounter.settText("Done and Start");
+            }
+        });
+        Button button3 = findViewById(R.id.min60);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                openMain3Activity();
                 //beginCounter.settText("Done and Start");
             }
         });
     }
-    public void openMianActivity() {
+    public void openMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-    public void openMian2Activity() {
+    public void openMain2Activity() {
         Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
+    public void openMain3Activity() {
+        Intent intent = new Intent(this, Main3Activity.class);
         startActivity(intent);
     }
 }

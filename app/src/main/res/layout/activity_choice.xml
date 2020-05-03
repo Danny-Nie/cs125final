@@ -7,16 +7,18 @@
     tools:context=".ChoiceActivity">
 
     <TextView
-        android:id="@+id/appName"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chose Your Time"
-        android:textSize="40sp"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="152dp" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="155dp"
+        android:text="Working For..."
+        android:textColor="#000000"
+        android:textSize="50dp" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/min25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -26,7 +28,7 @@
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/min60"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -40,7 +42,7 @@
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/min45"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
