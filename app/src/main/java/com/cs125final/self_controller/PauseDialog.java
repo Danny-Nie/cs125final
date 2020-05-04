@@ -44,6 +44,4 @@ public class PauseDialog extends AppCompatDialogFragment {
         }
 
     }
-
-
 }

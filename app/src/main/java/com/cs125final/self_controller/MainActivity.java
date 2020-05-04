@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
         }.start();
 
         mTimerRunning = true;
-        mButtonStartPause.setText("pause");
+        mButtonStartPause.setText("GiveUp");
         mButtonReset.setVisibility(View.INVISIBLE);
     }
 
@@ -102,7 +102,6 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
         mButtonReset.setVisibility(View.INVISIBLE);
         mButtonStartPause.setVisibility(View.VISIBLE);
     }
-
     private void updateCountDownText() {
         int minutes = (int) (mTimeLeftInMillis / 1000) / 60;
         int seconds = (int) (mTimeLeftInMillis / 1000) % 60;

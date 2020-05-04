@@ -85,7 +85,7 @@ public class Main2Activity extends AppCompatActivity implements PauseDialog.Paus
         }.start();
 
         mTimerRunning = true;
-        mButtonStartPause.setText("pause");
+        mButtonStartPause.setText("GiveUp");
         mButtonReset.setVisibility(View.INVISIBLE);
     }
 
