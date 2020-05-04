@@ -38,7 +38,7 @@
         android:layout_marginTop="4dp"
         android:layout_toEndOf="@+id/button_start_pause"
         android:layout_toRightOf="@+id/button_start_pause"
-        android:text="reset"
+        android:text="QUIT"
         android:visibility="invisible"
         tools:visibility="visible" />
 

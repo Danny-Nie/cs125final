@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="347dp"
         android:text="45 MIN"
         android:textSize="30sp" />
 
