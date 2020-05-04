@@ -64,8 +64,7 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
 
     @Override
     public void onBackClicked() {
-        Intent intent = new Intent(this, LaunchActivity.class);
-        startActivity(intent);
+        openDialog();
     }
 
     public void openDialog() {
