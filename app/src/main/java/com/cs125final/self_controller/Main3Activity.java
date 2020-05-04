@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-public class Main3Activity extends AppCompatActivity implements PauseDialog.PauseDialogListener {
+public class Main3Activity extends AppCompatActivity implements PauseDialog.PauseDialogListener, FinishedDialog.FinishedDialogListener {
     private static final long START_TIME_IN_MILLIS = 3600000;
 
     private TextView mTextViewCountDown;
@@ -50,11 +50,21 @@ public class Main3Activity extends AppCompatActivity implements PauseDialog.Paus
         mButtonReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                resetTimer();
+                openFinishedDialog();
             }
         });
 
         updateCountDownText();
+    }
+    public void openFinishedDialog() {
+        FinishedDialog finishedDialog = new FinishedDialog();
+        finishedDialog.show(getSupportFragmentManager(), "finished dialog");
+    }
+
+    @Override
+    public void onBackClicked() {
+        Intent intent = new Intent(this, LaunchActivity.class);
+        startActivity(intent);
     }
     public void openDialog() {
         PauseDialog dialog = new PauseDialog();
@@ -93,7 +103,7 @@ public class Main3Activity extends AppCompatActivity implements PauseDialog.Paus
         mCountDownTimer.cancel();
         mTimerRunning = false;
         mButtonStartPause.setText("Start");
-        mButtonReset.setVisibility(View.VISIBLE);
+        mButtonReset.setVisibility(View.INVISIBLE);
     }
 
     private void resetTimer() {

@@ -8,42 +8,34 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-public class PauseDialog extends AppCompatDialogFragment {
-    private PauseDialogListener listener;
+public class FinishedDialog extends AppCompatDialogFragment {
+    private FinishedDialogListener listener;
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle("Attention!")
-                .setMessage("Do you want to exit focus mode?")
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+        builder.setTitle("Congratulation")
+                .setMessage("You finish the task!")
+                .setPositiveButton("back to main page",new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                })
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        listener.onYesClicked();
+                        listener.onBackClicked();
                     }
                 });
         return builder.create();
     }
-
-    public interface PauseDialogListener {
-        void onYesClicked();
+    public interface FinishedDialogListener {
+        void onBackClicked();
     }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         try {
-            listener = (PauseDialogListener) context;
+            listener = (FinishedDialogListener) context;
         } catch (ClassCastException e) {
             throw new ClassCastException(context.toString()
-                    + "must implement PauseDialogListener");
+                    + "must implement FinishedDialogListener");
         }
 
     }
-
-
 }
