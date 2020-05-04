@@ -7,12 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements PauseDialog.PauseDialogListener{
+public class MainActivity extends AppCompatActivity implements PauseDialog.PauseDialogListener, FinishedDialog.FinishedDialogListener {
     private static final long START_TIME_IN_MILLIS = 1500000;
 
     private TextView mTextViewCountDown;
@@ -50,12 +51,23 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
         mButtonReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                resetTimer();
+                openFinishedDialog();
             }
         });
 
         updateCountDownText();
     }
+    public void openFinishedDialog() {
+        FinishedDialog finishedDialog = new FinishedDialog();
+        finishedDialog.show(getSupportFragmentManager(), "finished dialog");
+    }
+
+    @Override
+    public void onBackClicked() {
+        Intent intent = new Intent(this, LaunchActivity.class);
+        startActivity(intent);
+    }
+
     public void openDialog() {
         PauseDialog dialog = new PauseDialog();
         dialog.show(getSupportFragmentManager(), "pause dialog");
@@ -93,14 +105,17 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
         mCountDownTimer.cancel();
         mTimerRunning = false;
         mButtonStartPause.setText("Start");
-        mButtonReset.setVisibility(View.VISIBLE);
+        mButtonReset.setVisibility(View.INVISIBLE);
     }
 
     private void resetTimer() {
-        mTimeLeftInMillis = START_TIME_IN_MILLIS;
+        /** mTimeLeftInMillis = START_TIME_IN_MILLIS;
         updateCountDownText();
         mButtonReset.setVisibility(View.INVISIBLE);
         mButtonStartPause.setVisibility(View.VISIBLE);
+         */
+        Intent intent = new Intent(this, LaunchActivity.class);
+        startActivity(intent);
     }
     private void updateCountDownText() {
         int minutes = (int) (mTimeLeftInMillis / 1000) / 60;
