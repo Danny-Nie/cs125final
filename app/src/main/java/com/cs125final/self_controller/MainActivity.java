@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
         finishedDialog.show(getSupportFragmentManager(), "finished dialog");
     }
 
-    @Override
     public void onBackClicked() {
-        openDialog();
+        Intent intent = new Intent(this, LaunchActivity.class);
+        startActivity(intent);
     }
 
     public void openDialog() {
@@ -123,5 +123,9 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
         String timeLeftFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
 
         mTextViewCountDown.setText(timeLeftFormatted);
+    }
+    @Override
+    public void onBackPressed() {
+        openDialog();
     }
 }
