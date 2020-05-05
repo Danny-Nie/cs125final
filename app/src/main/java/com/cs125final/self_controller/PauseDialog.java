@@ -8,6 +8,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.q42.android.scrollingimageview.ScrollingImageView;
+
 public class PauseDialog extends AppCompatDialogFragment {
     private PauseDialogListener listener;
     @Override
@@ -18,7 +20,6 @@ public class PauseDialog extends AppCompatDialogFragment {
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
                     }
                 })
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {

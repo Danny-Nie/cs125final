@@ -16,12 +16,29 @@
         android:text="00:00"
         android:textColor="@android:color/black"
         android:textSize="60sp" />
-    <com.q42.android.scrollingimageview.ScrollingImageView
-        android:id="@+id/scrolling_background"
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        scrolling_image_view:speed="1dp"
-        scrolling_image_view:src="@drawable/scrolling_background" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp">
+
+        <com.q42.android.scrollingimageview.ScrollingImageView
+            android:id="@+id/scrolling_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            scrolling_image_view:randomness="@array/randomness"
+            scrolling_image_view:speed="3dp"
+            scrolling_image_view:src="@array/random_imgs" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:src="@drawable/van" />
+    </FrameLayout>
+
     <Button
         android:id="@+id/button_start_pause"
         android:layout_width="wrap_content"

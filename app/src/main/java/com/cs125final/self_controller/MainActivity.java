@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.q42.android.scrollingimageview.ScrollingImageView;
+
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements PauseDialog.PauseDialogListener, FinishedDialog.FinishedDialogListener {
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
     private boolean mTimerRunning;
 
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
+    private ScrollingImageView mScrollingBackground;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
 
         mButtonStartPause = findViewById(R.id.button_start_pause);
         mButtonReset = findViewById(R.id.button_reset);
-
+        mScrollingBackground = findViewById(R.id.scrolling_background);
+        mScrollingBackground.stop();
         mButtonStartPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,11 +102,13 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
         mTimerRunning = true;
         mButtonStartPause.setText("GiveUp");
         mButtonReset.setVisibility(View.INVISIBLE);
+        mScrollingBackground.start();
     }
 
     private void pauseTimer() {
         mCountDownTimer.cancel();
         mTimerRunning = false;
+        mScrollingBackground.stop();
         mButtonStartPause.setText("Start");
         mButtonReset.setVisibility(View.INVISIBLE);
     }
