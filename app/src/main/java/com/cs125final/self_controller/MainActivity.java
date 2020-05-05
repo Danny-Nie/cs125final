@@ -17,7 +17,7 @@ import com.q42.android.scrollingimageview.ScrollingImageView;
 import java.util.Locale;
 
 /**
- * reference.
+ * We used a portion of the code from the following website but did some heavy modification:
  *
 https://codinginflow.com/tutorials/android/countdowntimer/part-1-countdown-timer
 https://codinginflow.com/tutorials/android/alertdialog-interface
