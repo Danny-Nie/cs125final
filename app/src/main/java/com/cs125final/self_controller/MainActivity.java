@@ -6,6 +6,7 @@ import android.os.CountDownTimer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
     private static final long START_TIME_IN_MILLIS = 1500000;
 
     private TextView mTextViewCountDown;
+    private TextView mcheat;
     private Button mButtonStartPause;
     private Button mButtonReset;
 
@@ -33,6 +35,10 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ImageView mImageView = (ImageView) findViewById(R.id.imageView);
+        mImageView.setImageResource(R.drawable.challen);
+
+        mcheat = findViewById(R.id.cheat);
 
         mTextViewCountDown = findViewById(R.id.text_view_countdown);
 
