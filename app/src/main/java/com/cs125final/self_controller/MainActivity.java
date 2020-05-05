@@ -16,6 +16,13 @@ import com.q42.android.scrollingimageview.ScrollingImageView;
 
 import java.util.Locale;
 
+/**
+ * reference.
+ *
+https://codinginflow.com/tutorials/android/countdowntimer/part-1-countdown-timer
+https://codinginflow.com/tutorials/android/alertdialog-interface
+ */
+
 public class MainActivity extends AppCompatActivity implements PauseDialog.PauseDialogListener, FinishedDialog.FinishedDialogListener {
     private static final long START_TIME_IN_MILLIS = 1500000;
 
