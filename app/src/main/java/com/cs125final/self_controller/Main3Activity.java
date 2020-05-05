@@ -67,6 +67,7 @@ public class Main3Activity extends AppCompatActivity implements PauseDialog.Paus
 
     public void onBackClicked() {
         Intent intent = new Intent(this, LaunchActivity.class);
+        intent.putExtra("givenUp", 0);
         startActivity(intent);
     }
     public void openDialog() {
@@ -77,6 +78,7 @@ public class Main3Activity extends AppCompatActivity implements PauseDialog.Paus
     @Override
     public void onYesClicked() {
         Intent intent = new Intent(this, ChoiceActivity.class);
+        intent.putExtra("givenUp", 1);
         startActivity(intent);
     }
 

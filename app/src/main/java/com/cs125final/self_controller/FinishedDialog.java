@@ -15,7 +15,7 @@ public class FinishedDialog extends AppCompatDialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Congratulation")
                 .setMessage("You finish the task without using your phone!")
-                .setPositiveButton("Prepare for another work",new DialogInterface.OnClickListener() {
+                .setPositiveButton("Prepare to do more work!",new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         listener.onBackClicked();

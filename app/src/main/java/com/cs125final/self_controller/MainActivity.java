@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
 
     public void onBackClicked() {
         Intent intent = new Intent(this, LaunchActivity.class);
+        intent.putExtra("givenUp", 0);
         startActivity(intent);
     }
 
@@ -79,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
     @Override
     public void onYesClicked() {
         Intent intent = new Intent(this, ChoiceActivity.class);
+        intent.putExtra("givenUp", 1);
         startActivity(intent);
     }
 
@@ -109,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
         mCountDownTimer.cancel();
         mTimerRunning = false;
         mScrollingBackground.stop();
-        mButtonStartPause.setText("Start");
+        mButtonStartPause.setText("Resume");
         mButtonReset.setVisibility(View.INVISIBLE);
     }
 
