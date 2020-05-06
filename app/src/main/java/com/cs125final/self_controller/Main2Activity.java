@@ -110,7 +110,7 @@ public class Main2Activity extends AppCompatActivity implements PauseDialog.Paus
         mCountDownTimer.cancel();
         mTimerRunning = false;
         mScrollingBackground.stop();
-        mButtonStartPause.setText("Start");
+        mButtonStartPause.setText("Resume");
         mButtonReset.setVisibility(View.INVISIBLE);
     }
 
@@ -131,6 +131,11 @@ public class Main2Activity extends AppCompatActivity implements PauseDialog.Paus
     }
     @Override
     public void onBackPressed() {
-        openDialog();
+        if (mTimerRunning) {
+            pauseTimer();
+            openDialog();
+        } else {
+            super.onBackPressed();
+        }
     }
 }

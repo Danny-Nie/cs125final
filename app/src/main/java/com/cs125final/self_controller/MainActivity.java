@@ -147,6 +147,11 @@ public class MainActivity extends AppCompatActivity implements PauseDialog.Pause
     }
     @Override
     public void onBackPressed() {
-        openDialog();
+        if (mTimerRunning) {
+            pauseTimer();
+            openDialog();
+        } else {
+            super.onBackPressed();
+        }
     }
 }
